@@ -35,6 +35,8 @@
    @endif
    <div class="container">
     <div class="card card-white mt-4">
+
+        {{ Auth::user() }}
     @yield('content')
      </div>
    </div>

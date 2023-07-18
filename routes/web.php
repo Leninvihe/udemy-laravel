@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     
 });
 
-Route::group(['prefix' => 'dashboard','middleware' => 'auth'],function () {
+Route::group(['prefix' => 'dashboard','middleware' => ['auth',"admin"]],function () {
 
     Route::get('/', function () {
         return view('dashboard');
